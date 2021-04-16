@@ -4,7 +4,8 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/music">Music</router-link> |
       <router-link to="/sports">Sports</router-link> |
-      <router-link to="/math">Math</router-link>
+      <router-link to="/math">Math</router-link> |
+      <router-link to="/travel">Travel</router-link> 
     </div>
     <router-view/>
   </div>

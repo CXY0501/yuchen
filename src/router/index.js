@@ -27,6 +27,11 @@ const routes = [
     path: '/math',
     name: 'Math',
     component: () => import('../views/Math.vue')
+  },
+  {
+    path: '/travel',
+    name: 'Travel',
+    component: () => import('../views/Travel.vue')
   }
 ]
 
