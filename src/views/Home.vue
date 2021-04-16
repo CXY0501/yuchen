@@ -1,6 +1,8 @@
 <template>
   <div class="home">
-    <h1>This is Home Page</h1>
+    <div class="focusimg">
+      <img id="focusimg" src="../assets/img/home/hockey.jpeg" alt="">
+    </div>
   </div>
 </template>
 
@@ -14,3 +16,10 @@ export default {
   }
 }
 </script>
+
+<style>
+  #focusimg{
+    width: 100vw;
+    left: 0px;
+  }
+</style>
