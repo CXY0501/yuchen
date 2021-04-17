@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="focusimg">
+    <div class="homebox">
       <img id="focusimg" src="../assets/img/home/hockey.jpeg" alt="">
       <span id="intro">Hi, this is YC Chen, <br>Welcome to my personal website!</span>
     </div>
@@ -19,10 +19,16 @@ export default {
 </script>
 
 <style>
+  .homebox{
+    overflow: hidden;
+    height: 90vh;
+  }
   #focusimg{
+    float: left;
+    /* top:-60px; */
     width: 100vw;
     left: 0px;
-    margin: 0px;
+    margin-top: -100px;
   }
   #intro{
     position: absolute;
