@@ -1,12 +1,12 @@
 <template>
-  <div class="math">
-    <h1>This is math Page</h1>
+  <div class="Academic">
+    <h1>This is Academic Page</h1>
   </div>
 </template>
 
 <script>
 export default{
-  name:'math',
+  name:'academic',
   data(){
     return{}
   },

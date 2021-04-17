@@ -4,14 +4,17 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/music">Music</router-link> |
       <router-link to="/sports">Sports</router-link> |
-      <router-link to="/math">Math</router-link> |
+      <router-link to="/academic">Academic</router-link> |
       <router-link to="/travel">Travel</router-link> 
     </div>
     <router-view/>
   </div>
 </template>
 
-<style scoped>
+<style>
+body{
+  margin: 0px;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -21,7 +24,7 @@
 }
 
 #nav {
-  padding: 30px;
+  padding: 20px;
 }
 
 #nav a {

@@ -24,9 +24,9 @@ const routes = [
     component: () => import('../views/Sports.vue')
   },
   {
-    path: '/math',
-    name: 'Math',
-    component: () => import('../views/Math.vue')
+    path: '/academic',
+    name: 'Academic',
+    component: () => import('../views/Academic.vue')
   },
   {
     path: '/travel',
