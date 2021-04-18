@@ -7,10 +7,10 @@
     <div id="growth">My Growth</div>
     <div id="history">
       <span class="arrow"><img src="../assets/img/home/leftarrow.png" alt=""></span>
-      <span class="growthpic">1</span>
-      <span class="growthpic">2</span>
-      <span class="growthpic">3</span>
-      <span class="growthpic">4</span>
+      <span class="growthpic">Age 0</span>
+      <span class="growthpic">Age 1</span>
+      <span class="growthpic">Age 2</span>
+      <span class="growthpic">Age 3</span>
       <span class="arrow"><img src="../assets/img/home/rightarrow.png" alt=""></span>
      
     </div>
