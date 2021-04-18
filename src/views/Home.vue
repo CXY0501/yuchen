@@ -4,12 +4,15 @@
       <img id="focusimg" src="../assets/img/home/hockey.jpeg" alt="">
       <span id="intro">Hi, this is YC Chen, <br>Welcome to my personal website!</span>
     </div>
+    <div id="growth">My Growth</div>
     <div id="history">
-      <div id="growth">My Growth</div>
-      <span>1</span>
-      <span>2</span>
-      <span>3</span>
-      <span>4</span>
+      <span class="arrow"><img src="../assets/img/home/leftarrow.png" alt=""></span>
+      <span class="growthpic">1</span>
+      <span class="growthpic">2</span>
+      <span class="growthpic">3</span>
+      <span class="growthpic">4</span>
+      <span class="arrow"><img src="../assets/img/home/rightarrow.png" alt=""></span>
+     
     </div>
   </div>
 </template>
@@ -50,12 +53,24 @@ export default {
     box-shadow: 3px;
     align-content: center;
   }
-  #history span{
+  .growthpic{
     margin: 15px;
     display: inline-block;
     height: 200px;
     width: 300px;
     background-color: #eeee;
+  }
+  .arrow img{
+    height: 50px;
+    width: 50px;
+  }
+  .arrow{
+    display: table-cell;
+    vertical-align: middle;
+  }
+  #history{
+    margin-left: 10px;
+    display: table;
   }
   #growth{
     margin-top: 25px;
