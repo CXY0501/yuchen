@@ -4,6 +4,13 @@
       <img id="focusimg" src="../assets/img/home/hockey.jpeg" alt="">
       <span id="intro">Hi, this is YC Chen, <br>Welcome to my personal website!</span>
     </div>
+    <div id="history">
+      <div id="growth">My Growth</div>
+      <span>1</span>
+      <span>2</span>
+      <span>3</span>
+      <span>4</span>
+    </div>
   </div>
 </template>
 
@@ -42,5 +49,16 @@ export default {
     font-size: 30px;
     box-shadow: 3px;
     align-content: center;
+  }
+  #history span{
+    margin: 15px;
+    display: inline-block;
+    height: 200px;
+    width: 300px;
+    background-color: #eeee;
+  }
+  #growth{
+    margin-top: 25px;
+    font-size: 30px;
   }
 </style>
