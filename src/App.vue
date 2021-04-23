@@ -5,14 +5,14 @@
       <router-link to="/music">Music</router-link> |
       <router-link to="/sports">Sports</router-link> |
       <router-link to="/academic">Academic</router-link> |
-      <router-link to="/travel">Travel</router-link> 
+      <router-link to="/travel">Travel</router-link>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <style>
-body{
+body {
   margin: 0px;
 }
 #app {
