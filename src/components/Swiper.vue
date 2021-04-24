@@ -38,35 +38,39 @@ export default {
       swiperlist: [
         {
           id: "0",
-          imgURL: require("../assets/img/swiperImgs/swiper01.jpeg"),
+          imgURL: require("../assets/img/swiperImgs/swiper00.jpeg"),
         },
         {
           id: "1",
-          imgURL: require("../assets/img/swiperImgs/swiper02.jpeg"),
-        },
-        {
-          id: "2",
-          imgURL: require("../assets/img/swiperImgs/swiper03.jpeg"),
-        },
-        {
-          id: "3",
-          imgURL: require("../assets/img/swiperImgs/swiper04.jpeg"),
-        },
-        {
-          id: "4",
           imgURL: require("../assets/img/swiperImgs/swiper01.jpeg"),
         },
         {
-          id: "5",
+          id: "2",
           imgURL: require("../assets/img/swiperImgs/swiper02.jpeg"),
         },
         {
-          id: "6",
+          id: "3",
           imgURL: require("../assets/img/swiperImgs/swiper03.jpeg"),
         },
         {
-          id: "7",
+          id: "4",
           imgURL: require("../assets/img/swiperImgs/swiper04.jpeg"),
+        },
+        {
+          id: "5",
+          imgURL: require("../assets/img/swiperImgs/swiper05.jpeg"),
+        },
+        {
+          id: "6",
+          imgURL: require("../assets/img/swiperImgs/swiper06.jpeg"),
+        },
+        {
+          id: "7",
+          imgURL: require("../assets/img/swiperImgs/swiper07.jpeg"),
+        },
+        {
+          id: "8",
+          imgURL: require("../assets/img/swiperImgs/swiper08.jpeg"),
         },
       ],
     };
