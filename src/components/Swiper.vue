@@ -18,15 +18,17 @@ export default {
         pagination: ".swiper-pagination",
         loop: true,
         autoplay: {
-          delay: 2000,
+          delay: 3000,
           disableOnInteraction: false,
         },
         effect: "coverflow",
         coverflowEffect: {
           // coverflow 效果细节调整
-          rotate: 0,
-          stretch: 50,
-          depth: 350,
+          rotate: 20,
+          stretch: 30,
+          depth: 550,
+          modifier: 2,
+          slideShadows: true,
         },
         // virtual: true,
       },
