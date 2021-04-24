@@ -1,25 +1,17 @@
 <template>
   <div class="home">
     <section class="homebox">
-      <img class="star" src="../assets/img/home/bg.jpg" />
-      <img class="star" src="../assets/img/home/moon.png" />
-      <img class="star" src="../assets/img/home/mountain.png" />
-      <img class="star" src="../assets/img/home/hockey.png" />
-      <h2>YUCHEN CHEN</h2>
+      <img class="bg" ref="bg" src="../assets/img/home/bg.jpg" />
+      <img class="moon" ref="moon" src="../assets/img/home/moon.png" />
+      <img
+        class="mountain"
+        ref="mountain"
+        src="../assets/img/home/mountain.png"
+      />
+      <img class="hockey" ref="hockey" src="../assets/img/home/hockey.png" />
+      <h2 id="text" ref="text">Yuchen</h2>
     </section>
-    <div id="growth">- My Growth -</div>
-    <!-- <div id="history">
-      <span class="arrow"
-        ><img src="../assets/img/home/leftarrow.png" alt=""
-      /></span>
-      <span class="growthpic">Age 0</span>
-      <span class="growthpic">Age 1</span>
-      <span class="growthpic">Age 2</span>
-      <span class="growthpic">Age 3</span>
-      <span class="arrow"
-        ><img src="../assets/img/home/rightarrow.png" alt=""
-      /></span>
-    </div> -->
+    <div id="growth">- Growth -</div>
     <div>
       <homeswiper></homeswiper>
     </div>
@@ -31,6 +23,27 @@ import homeswiper from "../components/Swiper";
 
 export default {
   name: "Home",
+  data() {
+    return {
+      scroll: "",
+    };
+  },
+  methods: {
+    menu() {
+      this.scroll =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      console.log(this.scroll);
+      this.$refs.bg.style.top = this.scroll * 0.5 + "px";
+      this.$refs.moon.style.left = -this.scroll * 0.5 + "px";
+      this.$refs.mountain.style.top = -this.scroll * 0.15 + "px";
+      this.$refs.mountain.style.top = this.scroll * 0.15 + "px";
+      this.$refs.text.style.top = this.scroll * 1 + "px";
+      // console.log(this.$refs.bg);
+    },
+  },
+  mounted() {
+    window.addEventListener("scroll", this.menu);
+  },
   components: { homeswiper },
 };
 </script>
@@ -38,6 +51,7 @@ export default {
 <style>
 .homebox {
   position: relative;
+  top: 60px;
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -53,9 +67,20 @@ section:before {
   width: 100%;
   height: 100px;
   background: linear-gradient(to top, #0a2a43, transparent);
-  z-index: 1000;
+  z-index: 999;
 }
-.star {
+section:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0a2a43;
+  mix-blend-mode: color;
+  z-index: 999;
+}
+section img {
   position: absolute;
   top: 0;
   left: 0;
@@ -64,41 +89,23 @@ section:before {
   object-fit: cover;
   pointer-events: none;
 }
-#intro {
-  position: absolute;
-  padding-top: 5%;
-  left: 10%;
-  top: 25%;
-  background-color: rgba(5, 42, 85, 0.75);
-  height: 25%;
-  width: 45%;
-  color: white;
-  font-size: 30px;
-  box-shadow: 3px;
-  align-content: center;
+#text {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  position: relative;
+  width: 80%;
+  color: #fff;
+  font-size: 13em;
+  text-align: left;
+  z-index: 1;
 }
-.growthpic {
-  margin: 15px;
-  display: inline-block;
-  height: 200px;
-  width: 300px;
-  background-color: #eeee;
-}
-.arrow img {
-  height: 50px;
-  width: 50px;
-}
-.arrow {
-  display: table-cell;
-  vertical-align: middle;
-}
-#history {
-  margin-left: 10px;
-  display: table;
+.hockey {
+  z-index: 2;
 }
 #growth {
-  margin-top: 25px;
+  margin-top: 105px;
   font-size: 30px;
   height: 69px;
+  color: #fff;
 }
 </style>

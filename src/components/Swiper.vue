@@ -78,7 +78,7 @@ export default {
 .wrapper {
   margin: 0 auto;
   overflow: hidden;
-  width: 80%;
+  width: 95%;
   /* height: 0; */
   /* padding-bottom: 50%; */
 }

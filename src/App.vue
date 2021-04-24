@@ -31,7 +31,7 @@ body {
   background-color: rgb(10, 10, 41);
   position: fixed;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
 }
 
 #nav a {
