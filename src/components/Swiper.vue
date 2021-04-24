@@ -26,8 +26,8 @@ export default {
         centeredSlides: true,
         coverflowEffect: {
           // coverflow 效果细节调整
-          rotate: 30,
-          stretch: 80,
+          rotate: 20,
+          stretch: 10,
           depth: 150,
           modifier: 2,
           slideShadows: true,
