@@ -52,7 +52,7 @@ export default {
 .homebox {
   position: relative;
   top: 60px;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
   display: flex;
@@ -90,14 +90,14 @@ section img {
   pointer-events: none;
 }
 #text {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  /* font-family: "Microsoft YaHei"; */
   position: relative;
   width: 80%;
   color: #fff;
   font-size: 13em;
   text-align: left;
   z-index: 1;
+  text-shadow: 5px 5px 5px #000;
 }
 .hockey {
   z-index: 2;

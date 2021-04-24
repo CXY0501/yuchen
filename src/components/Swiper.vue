@@ -2,7 +2,7 @@
   <div class="wrapper">
     <swiper :options="swiperOptions">
       <swiper-slide :key="item.id" v-for="item in swiperlist">
-        <div>{{ item.id }} years old</div>
+        <div class="imgHeader">{{ item.id }} years old</div>
         <img class="swiper-img" :src="item.imgURL" />
       </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
@@ -89,5 +89,8 @@ export default {
 }
 .swiper-img {
   width: 100%;
+}
+.imgHeader {
+  background-color: rgb(10, 10, 41);
 }
 </style>
