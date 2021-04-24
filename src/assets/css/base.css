@@ -22,8 +22,9 @@ body {
     "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
-  background: var(--color-background);
+  background: #0a2a43;
   width: 100vw;
+  min-height: 1500px;
 }
 
 a {

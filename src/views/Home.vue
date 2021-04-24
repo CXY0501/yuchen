@@ -1,12 +1,13 @@
 <template>
   <div class="home">
-    <div class="homebox">
-      <img id="focusimg" src="../assets/img/home/hockey.jpeg" alt="" />
-      <span id="intro"
-        >Hi, this is YC Chen, <br />Welcome to my personal website!</span
-      >
-    </div>
-    <div id="growth">My Growth</div>
+    <section class="homebox">
+      <img class="star" src="../assets/img/home/bg.jpg" />
+      <img class="star" src="../assets/img/home/moon.png" />
+      <img class="star" src="../assets/img/home/mountain.png" />
+      <img class="star" src="../assets/img/home/hockey.png" />
+      <h2>YUCHEN CHEN</h2>
+    </section>
+    <div id="growth">- My Growth -</div>
     <!-- <div id="history">
       <span class="arrow"
         ><img src="../assets/img/home/leftarrow.png" alt=""
@@ -36,15 +37,32 @@ export default {
 
 <style>
 .homebox {
+  position: relative;
+  width: 100%;
+  height: 100vh;
   overflow: hidden;
-  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 90vh; */
 }
-#focusimg {
-  float: left;
-  /* top:-60px; */
-  width: 100vw;
-  left: 0px;
-  margin-top: -100px;
+section:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #0a2a43, transparent);
+  z-index: 1000;
+}
+.star {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  pointer-events: none;
 }
 #intro {
   position: absolute;
@@ -81,5 +99,6 @@ export default {
 #growth {
   margin-top: 25px;
   font-size: 30px;
+  height: 69px;
 }
 </style>

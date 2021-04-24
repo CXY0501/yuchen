@@ -14,25 +14,32 @@
 <style>
 body {
   margin: 0px;
+  background: #0a2a43;
+  min-height: 1500px;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #427fb9;
 }
 
 #nav {
   padding: 20px;
+  width: 100%;
+  background-color: rgb(10, 10, 41);
+  position: fixed;
+  top: 0;
+  z-index: 100;
 }
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #427fb9;
 }
 
 #nav a.router-link-exact-active {
-  color: #427fb9;
+  color: #fff;
 }
 </style>
