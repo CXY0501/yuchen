@@ -22,11 +22,13 @@ export default {
           disableOnInteraction: false,
         },
         effect: "coverflow",
+        slidesPerView: 3,
+        centeredSlides: true,
         coverflowEffect: {
           // coverflow 效果细节调整
-          rotate: 20,
-          stretch: 30,
-          depth: 550,
+          rotate: 30,
+          stretch: 80,
+          depth: 150,
           modifier: 2,
           slideShadows: true,
         },
@@ -49,6 +51,22 @@ export default {
           id: "004",
           imgURL: require("../assets/img/swiperImgs/swiper04.jpeg"),
         },
+        {
+          id: "005",
+          imgURL: require("../assets/img/swiperImgs/swiper01.jpeg"),
+        },
+        {
+          id: "006",
+          imgURL: require("../assets/img/swiperImgs/swiper02.jpeg"),
+        },
+        {
+          id: "007",
+          imgURL: require("../assets/img/swiperImgs/swiper03.jpeg"),
+        },
+        {
+          id: "008",
+          imgURL: require("../assets/img/swiperImgs/swiper04.jpeg"),
+        },
       ],
     };
   },
@@ -60,9 +78,9 @@ export default {
 .wrapper {
   margin: 0 auto;
   overflow: hidden;
-  width: 50%;
-  height: 0;
-  padding-bottom: 50%;
+  width: 80%;
+  /* height: 0; */
+  /* padding-bottom: 50%; */
 }
 .swiper-img {
   width: 100%;
