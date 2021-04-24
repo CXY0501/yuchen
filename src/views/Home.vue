@@ -7,7 +7,7 @@
       >
     </div>
     <div id="growth">My Growth</div>
-    <div id="history">
+    <!-- <div id="history">
       <span class="arrow"
         ><img src="../assets/img/home/leftarrow.png" alt=""
       /></span>
@@ -18,16 +18,19 @@
       <span class="arrow"
         ><img src="../assets/img/home/rightarrow.png" alt=""
       /></span>
+    </div> -->
+    <div>
+      <homeswiper></homeswiper>
     </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
+import homeswiper from "../components/Swiper";
 
 export default {
   name: "Home",
-  components: {},
+  components: { homeswiper },
 };
 </script>
 
