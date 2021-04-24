@@ -2,6 +2,7 @@
   <div class="wrapper">
     <swiper :options="swiperOptions">
       <swiper-slide :key="item.id" v-for="item in swiperlist">
+        <div>{{ item.id }} years old</div>
         <img class="swiper-img" :src="item.imgURL" />
       </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
@@ -36,35 +37,35 @@ export default {
       },
       swiperlist: [
         {
-          id: "001",
+          id: "0",
           imgURL: require("../assets/img/swiperImgs/swiper01.jpeg"),
         },
         {
-          id: "002",
+          id: "1",
           imgURL: require("../assets/img/swiperImgs/swiper02.jpeg"),
         },
         {
-          id: "003",
+          id: "2",
           imgURL: require("../assets/img/swiperImgs/swiper03.jpeg"),
         },
         {
-          id: "004",
+          id: "3",
           imgURL: require("../assets/img/swiperImgs/swiper04.jpeg"),
         },
         {
-          id: "005",
+          id: "4",
           imgURL: require("../assets/img/swiperImgs/swiper01.jpeg"),
         },
         {
-          id: "006",
+          id: "5",
           imgURL: require("../assets/img/swiperImgs/swiper02.jpeg"),
         },
         {
-          id: "007",
+          id: "6",
           imgURL: require("../assets/img/swiperImgs/swiper03.jpeg"),
         },
         {
-          id: "008",
+          id: "7",
           imgURL: require("../assets/img/swiperImgs/swiper04.jpeg"),
         },
       ],
