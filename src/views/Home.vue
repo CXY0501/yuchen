@@ -21,6 +21,25 @@
     <div>
       <homeswiper></homeswiper>
     </div>
+    <div id="hobbies">
+      <img id="hobbielogo" src="../assets/img/home/hobbies.png" />
+      <p>- Hobbies -</p>
+      <div>
+        <img class="hobbyImg" src="../assets/img/home/hobbies/icehockey.png" />
+      </div>
+      <div>
+        <img class="hobbyImg" src="../assets/img/home/hobbies/football.png" />
+      </div>
+      <div>
+        <img class="hobbyImg" src="../assets/img/home/hobbies/piano.png" />
+      </div>
+      <div>
+        <img class="hobbyImg" src="../assets/img/home/hobbies/math.png" />
+      </div>
+      <div>
+        <img class="hobbyImg" src="../assets/img/home/hobbies/go.png" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -109,7 +128,9 @@ section img {
   z-index: 2;
 }
 #growth,
-#growth p {
+#growth p,
+#hobbies,
+#hobbies p {
   margin-top: -10px;
   margin-bottom: 10px;
   font-size: 30px;
@@ -123,7 +144,11 @@ section img {
   padding-left: 50px;
   padding-right: 50px;
 }
-#growlogo {
+#growlogo,
+#hobbielogo {
   width: 200px;
+}
+.hobbyImg {
+  width: 80px;
 }
 </style>
