@@ -14,7 +14,10 @@
     <p class="myIntro">
       Hi, this is Yuchen Chen, Welcome to my personal website!
     </p>
-    <div id="growth">- Growth -</div>
+    <div id="growth">
+      <img id="growlogo" src="../assets/img/home/growth.png" />
+      <p>- Growth -</p>
+    </div>
     <div>
       <homeswiper></homeswiper>
     </div>
@@ -105,10 +108,12 @@ section img {
 .hockey {
   z-index: 2;
 }
-#growth {
-  margin-top: 105px;
+#growth,
+#growth p {
+  margin-top: -10px;
+  margin-bottom: 10px;
   font-size: 30px;
-  height: 69px;
+  /* height: 69px; */
   color: #fff;
 }
 .myIntro {
@@ -117,5 +122,8 @@ section img {
   font-size: 1.5em;
   padding-left: 50px;
   padding-right: 50px;
+}
+#growlogo {
+  width: 200px;
 }
 </style>

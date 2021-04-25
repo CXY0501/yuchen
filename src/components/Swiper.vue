@@ -92,5 +92,6 @@ export default {
 }
 .imgHeader {
   background-color: rgb(10, 10, 41);
+  color: aliceblue;
 }
 </style>
