@@ -11,6 +11,9 @@
       <img class="hockey" ref="hockey" src="../assets/img/home/hockey.png" />
       <h2 id="text" ref="text">Yuchen</h2>
     </section>
+    <p class="myIntro">
+      Hi, this is Yuchen Chen, Welcome to my personal website!
+    </p>
     <div id="growth">- Growth -</div>
     <div>
       <homeswiper></homeswiper>
@@ -107,5 +110,12 @@ section img {
   font-size: 30px;
   height: 69px;
   color: #fff;
+}
+.myIntro {
+  margin-top: 100px;
+  color: #fff;
+  font-size: 1.5em;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 </style>
