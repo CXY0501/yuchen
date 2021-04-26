@@ -29,6 +29,7 @@
         :key="item.id"
         @mouseover="hobbyHover(item.id)"
         @mouseleave="hobbyLeave(item.id)"
+        :class="{ active: item.id === selected }"
       >
         <img class="hobbyImg" :src="item.url0" />
       </div>
@@ -44,6 +45,7 @@ export default {
   data() {
     return {
       scroll: "",
+      selected: null,
       hobbyImg: [
         {
           id: "1",
@@ -93,9 +95,11 @@ export default {
     hobbyHover(id) {
       // console.log(id + "hovered");
       this.hobbyImg[id - 1].url0 = this.hobbyImg[id - 1].url1;
+      this.selected = id;
     },
     hobbyLeave(id) {
       this.hobbyImg[id - 1].url0 = this.hobbyImg[id - 1].url;
+      this.selected = null;
     },
   },
   mounted() {
@@ -182,5 +186,8 @@ section img {
 }
 .hobbyImg {
   width: 80px;
+}
+.active img {
+  width: 150px;
 }
 </style>
