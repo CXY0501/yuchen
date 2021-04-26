@@ -24,22 +24,11 @@
     <div id="hobbies">
       <img id="hobbielogo" src="../assets/img/home/hobbies.png" />
       <p>- Hobbies -</p>
-      <!-- <div>
-        <img class="hobbyImg" src="../assets/img/home/hobbies/icehockey.png" />
-      </div>
-      <div>
-        <img class="hobbyImg" src="../assets/img/home/hobbies/football.png" />
-      </div>
-      <div>
-        <img class="hobbyImg" src="../assets/img/home/hobbies/piano.png" />
-      </div>
-      <div>
-        <img class="hobbyImg" src="../assets/img/home/hobbies/math.png" />
-      </div> -->
       <div
         v-for="item in hobbyImg"
         :key="item.id"
         @mouseover="hobbyHover(item.id)"
+        @mouseleave="hobbyLeave(item.id)"
       >
         <img class="hobbyImg" :src="item.url0" />
       </div>
@@ -58,26 +47,31 @@ export default {
       hobbyImg: [
         {
           id: "1",
+          url: require("../assets/img/home/hobbies/icehockey.png"),
           url0: require("../assets/img/home/hobbies/icehockey.png"),
           url1: require("../assets/img/home/hobbies/icehockey1.png"),
         },
         {
           id: "2",
+          url: require("../assets/img/home/hobbies/football.png"),
           url0: require("../assets/img/home/hobbies/football.png"),
           url1: require("../assets/img/home/hobbies/football1.png"),
         },
         {
           id: "3",
+          url: require("../assets/img/home/hobbies/piano.png"),
           url0: require("../assets/img/home/hobbies/piano.png"),
           url1: require("../assets/img/home/hobbies/piano1.png"),
         },
         {
           id: "4",
+          url: require("../assets/img/home/hobbies/math.png"),
           url0: require("../assets/img/home/hobbies/math.png"),
           url1: require("../assets/img/home/hobbies/math1.png"),
         },
         {
           id: "5",
+          url: require("../assets/img/home/hobbies/go.png"),
           url0: require("../assets/img/home/hobbies/go.png"),
           url1: require("../assets/img/home/hobbies/go1.png"),
         },
@@ -99,6 +93,9 @@ export default {
     hobbyHover(id) {
       // console.log(id + "hovered");
       this.hobbyImg[id - 1].url0 = this.hobbyImg[id - 1].url1;
+    },
+    hobbyLeave(id) {
+      this.hobbyImg[id - 1].url0 = this.hobbyImg[id - 1].url;
     },
   },
   mounted() {
