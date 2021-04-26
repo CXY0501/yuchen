@@ -36,7 +36,11 @@
       <div>
         <img class="hobbyImg" src="../assets/img/home/hobbies/math.png" />
       </div> -->
-      <div v-for="item in hobbyImg" :key="item">
+      <div
+        v-for="item in hobbyImg"
+        :key="item.id"
+        @mouseover="hobbyHover(item.id)"
+      >
         <img class="hobbyImg" :src="item.url0" />
       </div>
     </div>
@@ -53,29 +57,29 @@ export default {
       scroll: "",
       hobbyImg: [
         {
-          id: 1,
+          id: "1",
           url0: require("../assets/img/home/hobbies/icehockey.png"),
-          url1: "../assets/img/home/hobbies/go1.png",
+          url1: require("../assets/img/home/hobbies/icehockey1.png"),
         },
         {
-          id: 2,
+          id: "2",
           url0: require("../assets/img/home/hobbies/football.png"),
-          url1: "../assets/img/home/hobbies/go1.png",
+          url1: require("../assets/img/home/hobbies/football1.png"),
         },
         {
-          id: 3,
+          id: "3",
           url0: require("../assets/img/home/hobbies/piano.png"),
-          url1: "../assets/img/home/hobbies/go1.png",
+          url1: require("../assets/img/home/hobbies/piano1.png"),
         },
         {
-          id: 4,
+          id: "4",
           url0: require("../assets/img/home/hobbies/math.png"),
-          url1: "../assets/img/home/hobbies/go1.png",
+          url1: require("../assets/img/home/hobbies/math1.png"),
         },
         {
-          id: 5,
+          id: "5",
           url0: require("../assets/img/home/hobbies/go.png"),
-          url1: "../assets/img/home/hobbies/go1.png",
+          url1: require("../assets/img/home/hobbies/go1.png"),
         },
       ],
     };
@@ -84,13 +88,17 @@ export default {
     menu() {
       this.scroll =
         document.documentElement.scrollTop || document.body.scrollTop;
-      console.log(this.scroll);
+      // console.log(this.scroll);
       this.$refs.bg.style.top = this.scroll * 0.5 + "px";
       this.$refs.moon.style.left = -this.scroll * 0.5 + "px";
       this.$refs.mountain.style.top = -this.scroll * 0.15 + "px";
       this.$refs.mountain.style.top = this.scroll * 0.15 + "px";
       this.$refs.text.style.top = this.scroll * 1 + "px";
       // console.log(this.$refs.bg);
+    },
+    hobbyHover(id) {
+      // console.log(id + "hovered");
+      this.hobbyImg[id - 1].url0 = this.hobbyImg[id - 1].url1;
     },
   },
   mounted() {
