@@ -189,5 +189,6 @@ section img {
 }
 .active img {
   width: 150px;
+  filter: drop-shadow(16px 16px 10px black);
 }
 </style>
