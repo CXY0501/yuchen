@@ -24,7 +24,7 @@
     <div id="hobbies">
       <img id="hobbielogo" src="../assets/img/home/hobbies.png" />
       <p>- Hobbies -</p>
-      <div>
+      <!-- <div>
         <img class="hobbyImg" src="../assets/img/home/hobbies/icehockey.png" />
       </div>
       <div>
@@ -35,9 +35,9 @@
       </div>
       <div>
         <img class="hobbyImg" src="../assets/img/home/hobbies/math.png" />
-      </div>
-      <div>
-        <img class="hobbyImg" src="../assets/img/home/hobbies/go.png" />
+      </div> -->
+      <div v-for="item in hobbyImg" :key="item">
+        <img class="hobbyImg" :src="item.url0" />
       </div>
     </div>
   </div>
@@ -51,6 +51,33 @@ export default {
   data() {
     return {
       scroll: "",
+      hobbyImg: [
+        {
+          id: 1,
+          url0: require("../assets/img/home/hobbies/icehockey.png"),
+          url1: "../assets/img/home/hobbies/go1.png",
+        },
+        {
+          id: 2,
+          url0: require("../assets/img/home/hobbies/football.png"),
+          url1: "../assets/img/home/hobbies/go1.png",
+        },
+        {
+          id: 3,
+          url0: require("../assets/img/home/hobbies/piano.png"),
+          url1: "../assets/img/home/hobbies/go1.png",
+        },
+        {
+          id: 4,
+          url0: require("../assets/img/home/hobbies/math.png"),
+          url1: "../assets/img/home/hobbies/go1.png",
+        },
+        {
+          id: 5,
+          url0: require("../assets/img/home/hobbies/go.png"),
+          url1: "../assets/img/home/hobbies/go1.png",
+        },
+      ],
     };
   },
   methods: {

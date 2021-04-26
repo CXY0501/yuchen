@@ -91,7 +91,7 @@ export default {
   width: 100%;
 }
 .imgHeader {
-  background-color: rgb(10, 10, 41);
+  background-color: rgba(10, 10, 41, 0.6);
   color: aliceblue;
 }
 </style>
