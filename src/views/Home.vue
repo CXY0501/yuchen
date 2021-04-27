@@ -31,7 +31,8 @@
         @mouseleave="hobbyLeave(item.id)"
         :class="{ active: item.id === selected }"
       >
-        <img class="hobbyImg" :src="item.url0" />
+        <span class="activeName">{{ item.name }}</span>
+        <span><img class="hobbyImg" :src="item.url0" /></span>
       </div>
     </div>
   </div>
@@ -49,30 +50,35 @@ export default {
       hobbyImg: [
         {
           id: "1",
+          name: "Ice Hockey",
           url: require("../assets/img/home/hobbies/icehockey.png"),
           url0: require("../assets/img/home/hobbies/icehockey.png"),
           url1: require("../assets/img/home/hobbies/icehockey1.png"),
         },
         {
           id: "2",
+          name: "Football",
           url: require("../assets/img/home/hobbies/football.png"),
           url0: require("../assets/img/home/hobbies/football.png"),
           url1: require("../assets/img/home/hobbies/football1.png"),
         },
         {
           id: "3",
+          name: "Piano",
           url: require("../assets/img/home/hobbies/piano.png"),
           url0: require("../assets/img/home/hobbies/piano.png"),
           url1: require("../assets/img/home/hobbies/piano1.png"),
         },
         {
           id: "4",
+          name: "Mathmatics",
           url: require("../assets/img/home/hobbies/math.png"),
           url0: require("../assets/img/home/hobbies/math.png"),
           url1: require("../assets/img/home/hobbies/math1.png"),
         },
         {
           id: "5",
+          name: "Game of Go",
           url: require("../assets/img/home/hobbies/go.png"),
           url0: require("../assets/img/home/hobbies/go.png"),
           url1: require("../assets/img/home/hobbies/go1.png"),
@@ -187,8 +193,24 @@ section img {
 .hobbyImg {
   width: 80px;
 }
+#hobbies {
+  color: #0a2a43;
+  font-size: 50px;
+}
+.active {
+  background-color: #fff;
+  /* line-height: 225px; */
+}
 .active img {
   width: 150px;
   filter: drop-shadow(16px 16px 10px black);
+  cursor: pointer;
+}
+.activeName {
+  display: none;
+}
+.active .activeName {
+  display: block;
+  cursor: pointer;
 }
 </style>
