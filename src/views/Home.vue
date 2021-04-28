@@ -30,9 +30,11 @@
         @mouseover="hobbyHover(item.id)"
         @mouseleave="hobbyLeave(item.id)"
         :class="{ active: item.id === selected }"
+        @click="hobbyClick(item.id)"
       >
         <span class="activeName">{{ item.name }}</span>
         <span><img class="hobbyImg" :src="item.url0" /></span>
+        <div class="activeIntro"></div>
       </div>
     </div>
   </div>
@@ -106,6 +108,9 @@ export default {
     hobbyLeave(id) {
       this.hobbyImg[id - 1].url0 = this.hobbyImg[id - 1].url;
       this.selected = null;
+    },
+    hobbyClick(id) {
+      console.log("active clicked");
     },
   },
   mounted() {
@@ -194,11 +199,11 @@ section img {
   width: 80px;
 }
 #hobbies {
-  color: #0a2a43;
+  color: #7dc5eb;
   font-size: 50px;
 }
 .active {
-  background-color: #fff;
+  /* background-color: #fff; */
   /* line-height: 225px; */
 }
 .active img {
@@ -212,5 +217,11 @@ section img {
 .active .activeName {
   display: block;
   cursor: pointer;
+}
+.active .activeIntro {
+  display: block;
+  width: 100%;
+  height: 300px;
+  background-color: #e3e3e3;
 }
 </style>
