@@ -276,6 +276,7 @@ section img {
   width: 80%;
   height: 500px;
   background-color: #e3e3e3;
+  box-shadow: 15px 15px 15px black;
 }
 .footer {
   height: 200px;
