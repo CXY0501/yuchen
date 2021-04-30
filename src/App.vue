@@ -28,7 +28,7 @@ body {
 #nav {
   padding: 20px;
   width: 100%;
-  background-color: rgb(10, 10, 41);
+  background-color: rgba(0, 0, 0, 0.85);
   position: fixed;
   top: 0;
   z-index: 1000;

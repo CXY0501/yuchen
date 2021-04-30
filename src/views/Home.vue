@@ -11,9 +11,52 @@
       <img class="hockey" ref="hockey" src="../assets/img/home/hockey.png" />
       <h2 id="text" ref="text">Yuchen</h2>
     </section>
-    <p class="myIntro">
-      Hi, this is Yuchen Chen, Welcome to my personal website!
-    </p>
+    <div class="myIntro">
+      <p class="welcome">
+        Hi, this is Yuchen Chen, Welcome to my personal website!
+      </p>
+      <h3>Bob’s Exciting adventure</h3>
+      <h4><i>By Yuchen Chen</i></h4>
+      <p>
+        If you walk pass 125 Leaf Street, you will see a poor dog barking
+        unhappily in a big cage. Well, the dog’s name is Bob. How did he end up
+        here? Here’s his story. Actually, before Bob had a very good owner. One
+        day, Bob’s owner took him to the park. The park was fresh and green.
+        Bob’s best friend, Ben accidentally bit on Bob’s string which is tied to
+        his owner. The string broke! Bob ran out of the park and down the
+        street. He didn't realised that he was lost. Bob ran and ran. Finally,
+        he was on Leaf street. His owner was still talking to Ben’s owner. Bob
+        was lost. After a few months, Bob became a stray dog. A man who didn't
+        like dogs saw him. The man wanted to go away but he was kind. Even he
+        didn't like dogs, he still adopted Bob.
+      </p>
+      <p>
+        So, now we know how Bob got into Leaf Street, let’s talk about his life
+        now. Why is still Bob unhappy? Maybe He still misses his own owner and
+        he doesn't like his adopted owner. His adopted owner only feeds him once
+        a day. Also, Bob can’t go to the green, fresh park everyday like old
+        times and he can’t eat his favourite fruit-blueberries. Bob loves
+        blueberries. His own owner gave him blueberries everyday. One day, Bob
+        can’t take it anymore. That night, when his owner came over to the dog
+        cage and checked if Bob was sleeping, Bob was closing his eyes. He was
+        pretending that he was sleeping. When his adopted owner slowly opened
+        the cage, Bob zoomed out of the cage as fast as a lightning! His adopted
+        owner chased him, but it was too late. Bob was out of sight.
+      </p>
+      <p>
+        Bob was finally out of Leaf Street. What’s his goal? Find his own owner.
+        Bob looked around. He saw a signal that told him Kent Road, go right. He
+        remembered that his own owner lives in Kent Road! He ran and ran. One
+        signal told him that he is in Kent Road! Bob looked right and left.
+        Then, he started to find the number 669. Finally, after a few minutes,
+        he found number 669. Hi barked at the door for a few hours. Bob was
+        starving. He thought that if he sleeps on the ground, tomorrow, his
+        owner can find him. Next morning, Bob found himself in a dog cage. He
+        was back in his owner’s house! Hooray! Bob returned at his own owner’s
+        house.
+      </p>
+      <p>They had a great time in the rest of their life.</p>
+    </div>
     <div id="growth">
       <img id="growlogo" src="../assets/img/home/growth.png" />
       <p>- Growth -</p>
@@ -37,6 +80,7 @@
         <div class="activeIntro" :style="{ display: clicked }"></div>
       </div>
     </div>
+    <div class="footer">footer</div>
   </div>
 </template>
 
@@ -187,10 +231,12 @@ section img {
   /* height: 69px; */
   color: #fff;
 }
-.myIntro {
-  margin-top: 100px;
+.home .myIntro {
+  width: 80%;
+  text-align: left;
+  margin: 100px auto;
   color: #fff;
-  font-size: 1.5em;
+  font-size: 1em;
   padding-left: 50px;
   padding-right: 50px;
 }
@@ -202,8 +248,9 @@ section img {
   width: 80px;
 }
 #hobbies {
+  margin-top: 50px;
   color: #fff;
-  font-size: 100px;
+  font-size: 85px;
 }
 .active {
   position: relative;
@@ -225,8 +272,22 @@ section img {
   cursor: pointer;
 }
 .active .activeIntro {
-  width: 100%;
-  height: 300px;
+  margin: 0 auto;
+  width: 80%;
+  height: 500px;
   background-color: #e3e3e3;
+}
+.footer {
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+.myIntro h3,
+.myIntro h4,
+.myIntro .welcome {
+  font-size: 1.5em;
+  text-align: center;
+}
+.myIntro h4 {
+  font-size: 1em;
 }
 </style>
