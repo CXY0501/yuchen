@@ -32,8 +32,8 @@
         @click="hobbyClick(item.id)"
         :class="{ active: item.id === selected }"
       >
-        <span class="activeName">{{ item.name }}</span>
-        <span><img class="hobbyImg" :src="item.url0" /></span>
+        <div class="activeName">{{ item.name }}</div>
+        <div><img class="hobbyImg" :src="item.url0" /></div>
         <div class="activeIntro" :style="{ display: clicked }"></div>
       </div>
     </div>
@@ -112,7 +112,7 @@ export default {
       this.clicked = "none";
     },
     hobbyClick(id) {
-      console.log("active clicked");
+      // console.log("active clicked");
       this.clicked = "block";
     },
   },
@@ -202,14 +202,16 @@ section img {
   width: 80px;
 }
 #hobbies {
-  color: #7dc5eb;
-  font-size: 50px;
+  color: #fff;
+  font-size: 100px;
 }
 .active {
-  /* background-color: #fff; */
-  /* line-height: 225px; */
+  position: relative;
 }
 .active img {
+  position: absolute;
+  top: 5px;
+  left: 22%;
   width: 150px;
   filter: drop-shadow(16px 16px 10px black);
   cursor: pointer;
@@ -219,6 +221,7 @@ section img {
 }
 .active .activeName {
   display: block;
+
   cursor: pointer;
 }
 .active .activeIntro {
