@@ -80,7 +80,57 @@
         <div class="activeIntro" :style="{ display: clicked }"></div>
       </div>
     </div>
-    <div class="footer">footer</div>
+    <div class="footer">
+      <div class="footerBox">
+        <div class="links">
+          <h3>Useful Links</h3>
+          <ul>
+            <li>
+              <a href="https://www.hktyphoons.com/" target="blank">
+                HK Typhoons
+              </a>
+            </li>
+            <li>
+              <a href="https://www.ycis-hk.com/en/" target="blank">YCIS</a>
+            </li>
+            <li><a href="https://www.apsoccer.hk/" target="blank">APSS</a></li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="follow">
+          <h3>Follow me</h3>
+          <span>
+            <ul>
+              <li>
+                <img src="../assets/img/home/wechatlogo.png" class="logo" />
+              </li>
+              <li><img src="../assets/img/home/Wechat.jpeg" alt="" /></li>
+            </ul>
+          </span>
+          <span>
+            <ul>
+              <li>
+                <img src="../assets/img/home/gzhlogo.png" class="logo" />
+              </li>
+              <li><img src="../assets/img/home/gzh.jpeg" alt="" /></li>
+            </ul>
+          </span>
+          <span>
+            <ul>
+              <li><img src="../assets/img/home/email.png" class="logo" /></li>
+              <li>ycchen@gmail.com</li>
+            </ul>
+          </span>
+        </div>
+        <div class="leaveMessage">
+          <h3>Leave me your message</h3>
+          <form name="leaveMessage" method="POST">
+            <textarea name="Message" id="111" cols="50" rows="3"></textarea>
+            <input type="button" value="Submit" />
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -232,7 +282,7 @@ section img {
   color: #fff;
 }
 .home .myIntro {
-  width: 80%;
+  width: 70%;
   text-align: left;
   margin: 100px auto;
   color: #fff;
@@ -290,5 +340,45 @@ section img {
 }
 .myIntro h4 {
   font-size: 1em;
+}
+.footerBox {
+  width: 80%;
+  margin: 0 auto;
+}
+.footerBox div {
+  float: left;
+  width: 33%;
+  text-align: center;
+  padding-top: 30px;
+}
+.footer ul {
+  margin: 0;
+  padding: 0;
+}
+.footer li {
+  list-style-type: none;
+}
+a {
+  color: #427fb9;
+  text-decoration: none;
+}
+a:active {
+  color: #e3e3e3;
+}
+a:hover {
+  color: #fff;
+}
+.follow span {
+  float: left;
+  display: inline-block;
+  width: 20%;
+  height: 90px;
+  padding-left: 10px;
+}
+.follow img {
+  width: 50px;
+}
+.follow .logo {
+  width: 25px;
 }
 </style>
