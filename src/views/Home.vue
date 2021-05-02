@@ -77,7 +77,10 @@
       >
         <div class="activeName">{{ item.name }}</div>
         <div><img class="hobbyImg" :src="item.url0" /></div>
-        <div class="activeIntro" :style="{ display: clicked }"></div>
+        <div class="activeIntro" :style="{ display: item.clicked }">
+          <div class="IntroLeft">left</div>
+          <div class="IntroRight">right</div>
+        </div>
       </div>
     </div>
     <div class="footer">
@@ -143,7 +146,6 @@ export default {
     return {
       scroll: "",
       selected: null,
-      clicked: "none",
       hobbyImg: [
         {
           id: "1",
@@ -151,6 +153,7 @@ export default {
           url: require("../assets/img/home/hobbies/icehockey.png"),
           url0: require("../assets/img/home/hobbies/icehockey.png"),
           url1: require("../assets/img/home/hobbies/icehockey1.png"),
+          clicked: "none",
         },
         {
           id: "2",
@@ -158,6 +161,7 @@ export default {
           url: require("../assets/img/home/hobbies/football.png"),
           url0: require("../assets/img/home/hobbies/football.png"),
           url1: require("../assets/img/home/hobbies/football1.png"),
+          clicked: "none",
         },
         {
           id: "3",
@@ -165,6 +169,7 @@ export default {
           url: require("../assets/img/home/hobbies/piano.png"),
           url0: require("../assets/img/home/hobbies/piano.png"),
           url1: require("../assets/img/home/hobbies/piano1.png"),
+          clicked: "none",
         },
         {
           id: "4",
@@ -172,6 +177,7 @@ export default {
           url: require("../assets/img/home/hobbies/math.png"),
           url0: require("../assets/img/home/hobbies/math.png"),
           url1: require("../assets/img/home/hobbies/math1.png"),
+          clicked: "none",
         },
         {
           id: "5",
@@ -179,6 +185,7 @@ export default {
           url: require("../assets/img/home/hobbies/go.png"),
           url0: require("../assets/img/home/hobbies/go.png"),
           url1: require("../assets/img/home/hobbies/go1.png"),
+          clicked: "none",
         },
       ],
     };
@@ -203,11 +210,11 @@ export default {
     hobbyLeave(id) {
       this.hobbyImg[id - 1].url0 = this.hobbyImg[id - 1].url;
       this.selected = null;
-      this.clicked = "none";
+      this.hobbyImg[id - 1].clicked = "none";
     },
     hobbyClick(id) {
-      // console.log("active clicked");
-      this.clicked = "block";
+      this.hobbyImg[id - 1].clicked = "block";
+      console.log(this.hobbyImg[id - 1].clicked);
     },
   },
   mounted() {
@@ -380,5 +387,20 @@ a:hover {
 }
 .follow .logo {
   width: 25px;
+}
+/* .activeIntro{
+  display: block;
+} */
+.IntroLeft {
+  float: left;
+  width: 70%;
+  height: 100%;
+  background-color: skyblue;
+}
+.IntroRight {
+  float: left;
+  width: 30%;
+  height: 100%;
+  background-color: pink;
 }
 </style>
