@@ -78,7 +78,7 @@
         <div class="activeName">{{ item.name }}</div>
         <div><img class="hobbyImg" :src="item.url0" /></div>
         <div class="activeIntro" :style="{ display: item.clicked }">
-          <div class="IntroLeft">left</div>
+          <div class="IntroLeft"><img :src="item.picurl" alt="" /></div>
           <div class="IntroRight">right</div>
         </div>
       </div>
@@ -153,6 +153,7 @@ export default {
           url: require("../assets/img/home/hobbies/icehockey.png"),
           url0: require("../assets/img/home/hobbies/icehockey.png"),
           url1: require("../assets/img/home/hobbies/icehockey1.png"),
+          picurl: require("../assets/img/home/hobbies/footballpic.jpeg"),
           clicked: "none",
         },
         {
@@ -161,6 +162,7 @@ export default {
           url: require("../assets/img/home/hobbies/football.png"),
           url0: require("../assets/img/home/hobbies/football.png"),
           url1: require("../assets/img/home/hobbies/football1.png"),
+          picurl: require("../assets/img/home/hobbies/footballpic.jpeg"),
           clicked: "none",
         },
         {
@@ -169,6 +171,7 @@ export default {
           url: require("../assets/img/home/hobbies/piano.png"),
           url0: require("../assets/img/home/hobbies/piano.png"),
           url1: require("../assets/img/home/hobbies/piano1.png"),
+          picurl: require("../assets/img/home/hobbies/footballpic.jpeg"),
           clicked: "none",
         },
         {
@@ -177,6 +180,7 @@ export default {
           url: require("../assets/img/home/hobbies/math.png"),
           url0: require("../assets/img/home/hobbies/math.png"),
           url1: require("../assets/img/home/hobbies/math1.png"),
+          picurl: require("../assets/img/home/hobbies/footballpic.jpeg"),
           clicked: "none",
         },
         {
@@ -185,6 +189,7 @@ export default {
           url: require("../assets/img/home/hobbies/go.png"),
           url0: require("../assets/img/home/hobbies/go.png"),
           url1: require("../assets/img/home/hobbies/go1.png"),
+          picurl: require("../assets/img/home/hobbies/footballpic.jpeg"),
           clicked: "none",
         },
       ],
@@ -312,7 +317,7 @@ section img {
 .active {
   position: relative;
 }
-.active img {
+.active .hobbyImg {
   position: absolute;
   top: 5px;
   left: 22%;
@@ -336,7 +341,7 @@ section img {
   box-shadow: 15px 15px 15px black;
 }
 .footer {
-  height: 200px;
+  height: 250px;
   background-color: rgba(0, 0, 0, 0.85);
 }
 .myIntro h3,
@@ -388,19 +393,20 @@ a:hover {
 .follow .logo {
   width: 25px;
 }
-/* .activeIntro{
-  display: block;
-} */
 .IntroLeft {
   float: left;
   width: 70%;
   height: 100%;
   background-color: skyblue;
+  overflow: hidden;
 }
 .IntroRight {
   float: left;
   width: 30%;
   height: 100%;
-  background-color: pink;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+.IntroLeft img {
+  width: 100%;
 }
 </style>
