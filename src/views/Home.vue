@@ -79,7 +79,10 @@
         <div><img class="hobbyImg" :src="item.url0" /></div>
         <div class="activeIntro" :style="{ display: item.clicked }">
           <div class="IntroLeft"><img :src="item.picurl" alt="" /></div>
-          <div class="IntroRight">right</div>
+          <div class="IntroRight">
+            <p>{{ item.hobbyIntro }}</p>
+            <a href="#">Learn more</a>
+          </div>
         </div>
       </div>
     </div>
@@ -153,7 +156,9 @@ export default {
           url: require("../assets/img/home/hobbies/icehockey.png"),
           url0: require("../assets/img/home/hobbies/icehockey.png"),
           url1: require("../assets/img/home/hobbies/icehockey1.png"),
-          picurl: require("../assets/img/home/hobbies/footballpic.jpeg"),
+          picurl: require("../assets/img/home/hobbies/icehockeypic.jpeg"),
+          hobbyIntro:
+            "I started to learn Ice Hockey from age of 5, now I'm a Selected U8 Hockey Player in Hong Kong Typhoons Ice Hockey Club",
           clicked: "none",
         },
         {
@@ -163,6 +168,8 @@ export default {
           url0: require("../assets/img/home/hobbies/football.png"),
           url1: require("../assets/img/home/hobbies/football1.png"),
           picurl: require("../assets/img/home/hobbies/footballpic.jpeg"),
+          hobbyIntro:
+            "Football is my second favorite sport, now I'm a Selected U8 Football Player in Hong Kong Asia Pacific Soccer School",
           clicked: "none",
         },
         {
@@ -172,6 +179,8 @@ export default {
           url0: require("../assets/img/home/hobbies/piano.png"),
           url1: require("../assets/img/home/hobbies/piano1.png"),
           picurl: require("../assets/img/home/hobbies/footballpic.jpeg"),
+          hobbyIntro:
+            "I started to learn Ice Hockey from age of 5, now I'm a Selected U8 Hockey Player in Hong Kong Typhoons Ice Hockey Playewr",
           clicked: "none",
         },
         {
@@ -181,6 +190,8 @@ export default {
           url0: require("../assets/img/home/hobbies/math.png"),
           url1: require("../assets/img/home/hobbies/math1.png"),
           picurl: require("../assets/img/home/hobbies/footballpic.jpeg"),
+          hobbyIntro:
+            "I started to learn Ice Hockey from age of 5, now I'm a Selected U8 Hockey Player in Hong Kong Typhoons Ice Hockey Playewr",
           clicked: "none",
         },
         {
@@ -190,6 +201,8 @@ export default {
           url0: require("../assets/img/home/hobbies/go.png"),
           url1: require("../assets/img/home/hobbies/go1.png"),
           picurl: require("../assets/img/home/hobbies/footballpic.jpeg"),
+          hobbyIntro:
+            "I started to learn Ice Hockey from age of 5, now I'm a Selected U8 Hockey Player in Hong Kong Typhoons Ice Hockey Playewr",
           clicked: "none",
         },
       ],
@@ -408,5 +421,14 @@ a:hover {
 }
 .IntroLeft img {
   width: 100%;
+}
+.IntroRight p {
+  margin: 20px;
+  padding-top: 45px;
+  text-align: left;
+  font-size: 25px;
+}
+.IntroRight a {
+  font-size: 20px;
 }
 </style>
