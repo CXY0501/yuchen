@@ -189,9 +189,9 @@ export default {
           url: require("../assets/img/home/hobbies/math.png"),
           url0: require("../assets/img/home/hobbies/math.png"),
           url1: require("../assets/img/home/hobbies/math1.png"),
-          picurl: require("../assets/img/home/hobbies/footballpic.jpeg"),
+          picurl: require("../assets/img/home/hobbies/mathpic.jpeg"),
           hobbyIntro:
-            "I started to learn Ice Hockey from age of 5, now I'm a Selected U8 Hockey Player in Hong Kong Typhoons Ice Hockey Playewr",
+            "I like to resolve Math problems, and I'm especially enjoying winning awards in Math Competitions",
           clicked: "none",
         },
         {
@@ -202,7 +202,7 @@ export default {
           url1: require("../assets/img/home/hobbies/go1.png"),
           picurl: require("../assets/img/home/hobbies/footballpic.jpeg"),
           hobbyIntro:
-            "I started to learn Ice Hockey from age of 5, now I'm a Selected U8 Hockey Player in Hong Kong Typhoons Ice Hockey Playewr",
+            "I am trying to upgrade my level in Game of Go, as I like thinking and winning the games",
           clicked: "none",
         },
       ],
