@@ -178,9 +178,9 @@ export default {
           url: require("../assets/img/home/hobbies/piano.png"),
           url0: require("../assets/img/home/hobbies/piano.png"),
           url1: require("../assets/img/home/hobbies/piano1.png"),
-          picurl: require("../assets/img/home/hobbies/footballpic.jpeg"),
+          picurl: require("../assets/img/home/hobbies/pianopic.jpeg"),
           hobbyIntro:
-            "I started to learn Ice Hockey from age of 5, now I'm a Selected U8 Hockey Player in Hong Kong Typhoons Ice Hockey Playewr",
+            "I have been learning and playing piano for 3 years, now I'm practicing grade 5 of ABRSM",
           clicked: "none",
         },
         {
