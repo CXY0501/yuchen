@@ -81,7 +81,7 @@
           <div class="IntroLeft"><img :src="item.picurl" alt="" /></div>
           <div class="IntroRight">
             <p>{{ item.hobbyIntro }}</p>
-            <a href="#">Learn more</a>
+            <router-link :to="item.link">Learn More</router-link>
           </div>
         </div>
       </div>
@@ -157,6 +157,7 @@ export default {
           url0: require("../assets/img/home/hobbies/icehockey.png"),
           url1: require("../assets/img/home/hobbies/icehockey1.png"),
           picurl: require("../assets/img/home/hobbies/icehockeypic.jpeg"),
+          link: "/sports",
           hobbyIntro:
             "I started to learn Ice Hockey from age of 5, now I'm a Selected U8 Hockey Player in Hong Kong Typhoons Ice Hockey Club",
           clicked: "none",
@@ -168,6 +169,7 @@ export default {
           url0: require("../assets/img/home/hobbies/football.png"),
           url1: require("../assets/img/home/hobbies/football1.png"),
           picurl: require("../assets/img/home/hobbies/footballpic.jpeg"),
+          link: "/sports",
           hobbyIntro:
             "Football is my second favorite sport, now I'm a Selected U8 Football Player in Hong Kong Asia Pacific Soccer School",
           clicked: "none",
@@ -179,6 +181,7 @@ export default {
           url0: require("../assets/img/home/hobbies/piano.png"),
           url1: require("../assets/img/home/hobbies/piano1.png"),
           picurl: require("../assets/img/home/hobbies/pianopic.jpeg"),
+          link: "/music",
           hobbyIntro:
             "I have been learning and playing piano for 3 years, now I'm practicing grade 5 of ABRSM",
           clicked: "none",
@@ -190,6 +193,7 @@ export default {
           url0: require("../assets/img/home/hobbies/math.png"),
           url1: require("../assets/img/home/hobbies/math1.png"),
           picurl: require("../assets/img/home/hobbies/mathpic.jpeg"),
+          link: "/academic",
           hobbyIntro:
             "I like to resolve Math problems, and I'm especially enjoying winning awards in Math Competitions",
           clicked: "none",
@@ -201,6 +205,7 @@ export default {
           url0: require("../assets/img/home/hobbies/go.png"),
           url1: require("../assets/img/home/hobbies/go1.png"),
           picurl: require("../assets/img/home/hobbies/footballpic.jpeg"),
+          link: "/sports",
           hobbyIntro:
             "I am trying to upgrade my level in Game of Go, as I like thinking and winning the games",
           clicked: "none",
