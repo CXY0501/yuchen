@@ -1,6 +1,6 @@
 <template>
   <div class="sports">
-    <h1>This is Sports Page</h1>
+    <div class="banner"></div>
   </div>
 </template>
 
@@ -14,4 +14,11 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.banner {
+  width: 85%;
+  height: 500px;
+  margin: 0 auto;
+  background-color: lightblue;
+}
+</style>
