@@ -1,6 +1,13 @@
 <template>
   <div class="sports">
-    <div class="banner"></div>
+    <div class="banner">
+      <embed
+        class="bannerVideo"
+        src="https://www.youtube.com/embed/mwqD4Cncdrc"
+        autostart="true"
+      />
+    </div>
+    <div></div>
   </div>
 </template>
 
@@ -18,7 +25,11 @@ export default {
 .banner {
   width: 85%;
   height: 500px;
-  margin: 0 auto;
+  margin: 62px auto;
   background-color: lightblue;
+}
+.bannerVideo {
+  width: 100%;
+  height: 100%;
 }
 </style>
