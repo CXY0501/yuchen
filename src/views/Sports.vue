@@ -21,7 +21,10 @@
         </li>
       </ul>
     </div>
-    <div></div>
+    <div>
+      <h2>Goal at 10:54 on May 16th, 2021</h2>
+      <h2>Goal at 25:51 on Mar 21st, 2021</h2>
+    </div>
   </div>
 </template>
 
@@ -54,6 +57,50 @@ export default {
         {
           name: "City League SD8AA Lenovo vs Keewah 20210411",
           url: "https://www.youtube.com/embed/-emP1ysgxB8",
+        },
+        {
+          name: "City League SD8AA Lenovo vs Keewah 20210328",
+          url: "https://www.youtube.com/embed/IMEukTiCSLQ",
+        },
+        {
+          name: "City League SD8AA Lenovo vs Keewah 20210321",
+          url: "https://www.youtube.com/embed/ZNg-hRO7SYE",
+        },
+        {
+          name: "City League SD8AA Lenovo vs Keewah 20210314",
+          url: "https://www.youtube.com/embed/ZF8UHJRiFvE",
+        },
+        {
+          name: "City League SD8AA Lenovo vs Keewah 20210307",
+          url: "https://www.youtube.com/embed/DfACJTN48w4",
+        },
+        {
+          name: "City League SD8AA Lenovo vs Keewah 20210228",
+          url: "https://www.youtube.com/embed/udZq91dg6VI",
+        },
+        {
+          name: "City League SD8AA Lenovo vs Keewah 20210221",
+          url: "https://www.youtube.com/embed/6J6d8XcYsMQ",
+        },
+        {
+          name: "City League SD8AA Lenovo vs Keewah 20201129",
+          url: "https://www.youtube.com/embed/XBuASCQQXew",
+        },
+        {
+          name: "City League SD8AA Lenovo vs Keewah 20201122",
+          url: "https://www.youtube.com/embed/Bz8CJ0_h0vA",
+        },
+        {
+          name: "City League SD8AA Lenovo vs Keewah 20201108",
+          url: "https://www.youtube.com/embed/5M4lEqpjPVQ",
+        },
+        {
+          name: "City League SD8AA Lenovo vs Keewah 20201101",
+          url: "https://www.youtube.com/embed/shHUCl7Rkws",
+        },
+        {
+          name: "City League SD8AA Lenovo vs Keewah 20201026",
+          url: "https://www.youtube.com/embed/cZOTLnLAF7Q",
         },
       ],
       urlChosen: "https://www.youtube.com/embed/5IY4sChY6bI",
@@ -95,10 +142,15 @@ export default {
 }
 .hockeyGames li {
   list-style-type: none;
-  padding-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   cursor: pointer;
 }
 .hockeyGames ul {
   padding-left: 0px;
+}
+.active {
+  color: lightblue;
+  background-color: gray;
 }
 </style>
