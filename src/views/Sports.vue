@@ -1,7 +1,12 @@
 <template>
   <div class="sports">
     <div class="banner">
-      <embed class="bannerVideo" :src="urlChosen" autostart="true" />
+      <embed
+        class="bannerVideo"
+        :src="urlChosen"
+        :key="menuKey"
+        autostart="true"
+      />
     </div>
     <div class="hockeyGames">
       <h3>City League Season 2020/21</h3>
@@ -53,14 +58,14 @@ export default {
       ],
       urlChosen: "https://www.youtube.com/embed/5IY4sChY6bI",
       selected: "",
+      menuKey: 1,
     };
   },
   methods: {
     videoClick(item) {
       this.urlChosen = item.url;
       this.selected = item.name;
-      console.log(this.selected);
-      console.log(this.urlChosen);
+      this.menuKey++;
     },
   },
 };
@@ -91,6 +96,7 @@ export default {
 .hockeyGames li {
   list-style-type: none;
   padding-top: 10px;
+  cursor: pointer;
 }
 .hockeyGames ul {
   padding-left: 0px;
