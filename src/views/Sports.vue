@@ -1,27 +1,32 @@
 <template>
   <div class="sports">
-    <div class="banner">
-      <embed
-        class="bannerVideo"
-        :src="urlChosen"
-        :key="menuKey"
-        autostart="true"
-      />
+    <div class="hockeySection">
+      <div class="banner">
+        <embed
+          class="bannerVideo"
+          :src="urlChosen"
+          :key="menuKey"
+          autostart="true"
+        />
+      </div>
+      <div class="hockeyGames">
+        <h3>City League Season 2020/21</h3>
+        <div class="menuBox">
+          <ul>
+            <li
+              v-for="item in games"
+              :key="item.url"
+              @click="videoClick(item)"
+              :class="{ active: item.name === selected }"
+            >
+              {{ item.name }}
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="hockeyGames">
-      <h3>City League Season 2020/21</h3>
-      <ul>
-        <li
-          v-for="item in games"
-          :key="item.url"
-          @click="videoClick(item)"
-          :class="{ active: item.name === selected }"
-        >
-          {{ item.name }}
-        </li>
-      </ul>
-    </div>
-    <div>
+
+    <div class="score">
       <h2>Goal at 10:54 on May 16th, 2021</h2>
       <h2>Goal at 25:51 on Mar 21st, 2021</h2>
     </div>
@@ -128,10 +133,14 @@ export default {
   width: 100%;
   height: 100%;
 }
+.hockeySection {
+  height: 520px;
+  margin-top: 62px;
+}
 .banner,
 .hockeyGames {
   float: left;
-  margin-top: 62px;
+
   height: 500px;
 }
 .hockeyGames {
@@ -139,6 +148,13 @@ export default {
   width: 28%;
   font-size: 15px;
   background-color: rgba(0, 0, 0, 0.65);
+}
+.menuBox {
+  height: 400px;
+  margin-bottom: 20px;
+  overflow: scroll;
+  /* overflow-y: auto; */
+  scrollbar-face-color: aliceblue;
 }
 .hockeyGames li {
   list-style-type: none;
@@ -152,5 +168,8 @@ export default {
 .active {
   color: lightblue;
   background-color: gray;
+}
+.score {
+  margin-top: 20px;
 }
 </style>
