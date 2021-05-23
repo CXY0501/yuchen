@@ -27,8 +27,44 @@
     </div>
 
     <div class="score">
-      <h2>Goal at 10:54 on May 16th, 2021</h2>
-      <h2>Goal at 25:51 on Mar 21st, 2021</h2>
+      <table class="pure-table pure-table-bordered">
+        <thead>
+          <tr>
+            <th>Player</th>
+            <th>Season</th>
+            <th>Team</th>
+            <th>Shoot</th>
+            <th>Position</th>
+            <th>Game Played</th>
+            <th>Goals</th>
+            <th>Assists</th>
+            <th>Points</th>
+            <th>Penalty Minutes</th>
+            <th>Points per Game</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Yuchen Chen</td>
+            <td>2021</td>
+            <td>Lenovo</td>
+            <td>Right</td>
+            <td>Defender</td>
+            <td>12</td>
+            <td>3</td>
+            <td>1</td>
+            <td>4</td>
+            <td>0</td>
+            <td>0.33</td>
+          </tr>
+          <tr>
+            <td colspan="11">Goal at 10:54 on May 16th, 2021</td>
+          </tr>
+          <tr>
+            <td colspan="11">Goal at 25:51 on Mar 21st, 2021</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </template>
@@ -194,5 +230,63 @@ export default {
 }
 .scrollbarShow::-webkit-scrollbar {
   display: block;
+}
+.score {
+  width: 80%;
+  margin: 0 auto;
+  color: aliceblue;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+.pure-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  border: 1px solid #cbcbcb;
+}
+
+.pure-table caption {
+  color: #000;
+  font: italic 85%/1 arial, sans-serif;
+  padding: 1em 0;
+  text-align: center;
+}
+
+.pure-table td,
+.pure-table th {
+  border-left: 1px solid #cbcbcb;
+  border-width: 0 0 0 1px;
+  font-size: inherit;
+  margin: 0;
+  overflow: visible;
+  padding: 0.5em 1em;
+}
+
+.pure-table thead {
+  background-color: #e0e0e0;
+  color: #000;
+  text-align: left;
+  vertical-align: bottom;
+}
+
+.pure-table td {
+  background-color: transparent;
+}
+
+.pure-table-bordered td {
+  border-bottom: 1px solid #cbcbcb;
+}
+
+.pure-table-bordered tbody > tr:last-child > td {
+  border-bottom-width: 0;
 }
 </style>
