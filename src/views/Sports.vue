@@ -47,7 +47,7 @@
           <tr>
             <td>Yuchen Chen</td>
             <td>2021</td>
-            <td>Lenovo</td>
+            <td>Whimsy/Lenovo</td>
             <td>Right</td>
             <td>Defender</td>
             <td>12</td>
@@ -66,6 +66,7 @@
         </tbody>
       </table>
     </div>
+    <div class="football"></div>
   </div>
 </template>
 
@@ -145,7 +146,7 @@ export default {
         },
       ],
       urlChosen: "https://www.youtube.com/embed/5IY4sChY6bI",
-      selected: "",
+      selected: "City League SD8AA Lenovo vs Keewah 20210516",
       menuKey: 1,
     };
   },
@@ -274,7 +275,7 @@ th {
 .pure-table thead {
   background-color: #e0e0e0;
   color: #000;
-  text-align: left;
+  text-align: center;
   vertical-align: bottom;
 }
 
@@ -288,5 +289,18 @@ th {
 
 .pure-table-bordered tbody > tr:last-child > td {
   border-bottom-width: 0;
+}
+.football {
+  /* margin: 0 auto; */
+  margin-left: 30%;
+  width: 100px;
+  height: 100px;
+  background: url(../assets/img/sport/football.png) 0 0 / 100% 100%;
+  animation: move 5s linear infinite alternate;
+}
+@keyframes move {
+  to {
+    transform: translate(500%, 0) rotate(1turn);
+  }
 }
 </style>
