@@ -67,10 +67,25 @@
       </table>
     </div>
     <div class="football"></div>
+    <div
+      class="fb-video"
+      data-href="https://www.facebook.com/unclebenphotos/videos/804773700158814"
+      data-width="auto"
+      data-show-text="false"
+    ></div>
   </div>
 </template>
 
 <script>
+(function (d, s, id) {
+  var js,
+    fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+  fjs.parentNode.insertBefore(js, fjs);
+})(document, "script", "facebook-jssdk");
 export default {
   name: "Sports",
   data() {
@@ -143,6 +158,10 @@ export default {
         {
           name: "City League SD8AA Lenovo vs Keewah 20201026",
           url: "https://www.youtube.com/embed/cZOTLnLAF7Q",
+        },
+        {
+          name: "facebook video",
+          url: "https://www.facebook.com/unclebenphotos/videos/804773700158814",
         },
       ],
       urlChosen: "https://www.youtube.com/embed/5IY4sChY6bI",
@@ -292,6 +311,8 @@ th {
 }
 .football {
   /* margin: 0 auto; */
+  margin-top: 50px;
+  margin-bottom: 50px;
   margin-left: 30%;
   width: 100px;
   height: 100px;
@@ -302,5 +323,8 @@ th {
   to {
     transform: translate(500%, 0) rotate(1turn);
   }
+}
+.fb-video {
+  width: 500px;
 }
 </style>
